@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ramadaxidin.github.io/web-home-aiyouxi-com-cn/sitemap.xml
