@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威廉希尔 · 产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+            background: linear-gradient(145deg, #fce6d9 0%, #fce5d0 50%, #fadfc5 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.2rem;
+            line-height: 1.6;
+            color: #33251b;
+        }
+        .card {
+            max-width: 880px;
+            width: 100%;
+            background: rgba(255, 252, 248, 0.92);
+            backdrop-filter: blur(4px);
+            border-radius: 48px 16px 48px 16px;
+            box-shadow: 0 20px 48px rgba(110, 60, 30, 0.15), 0 6px 12px rgba(0,0,0,0.04);
+            padding: 3rem 2.5rem;
+            transition: all 0.25s ease;
+        }
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #6d3a1d;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .subhead {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #8b5a3a;
+            margin-bottom: 1.6rem;
+            border-left: 4px solid #e1b99b;
+            padding-left: 1rem;
+        }
+        .tagline {
+            background: #f5e6db;
+            border-radius: 60px;
+            padding: 0.45rem 1.2rem;
+            font-size: 0.95rem;
+            color: #5f3521;
+            display: inline-block;
+            margin-bottom: 2rem;
+            letter-spacing: 0.3px;
+            border: 1px solid #edd9c9;
+        }
+        .hero-text {
+            font-size: 1.15rem;
+            background: #fcf5ef;
+            padding: 1.8rem 2rem;
+            border-radius: 28px 8px 28px 8px;
+            margin-bottom: 2.2rem;
+            box-shadow: inset 0 1px 4px rgba(170, 120, 70, 0.08);
+            color: #3c281e;
+        }
+        .hero-text strong {
+            color: #8a4e2a;
+        }
+        .highlight-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 2.2rem 0 2.4rem 0;
+        }
+        .high-item {
+            background: #f8ede3;
+            flex: 1 1 180px;
+            padding: 0.9rem 1.2rem;
+            border-radius: 28px 8px 28px 8px;
+            border: 1px solid #ebd7c8;
+            font-size: 0.98rem;
+            transition: 0.15s ease;
+        }
+        .high-item:hover {
+            background: #f0ddcf;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(140, 80, 40, 0.08);
+        }
+        .high-item span {
+            display: block;
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #6a3c24;
+            margin-bottom: 0.25rem;
+        }
+        .section-title {
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: #5c341e;
+            margin: 2.6rem 0 0.6rem 0;
+            letter-spacing: 0.3px;
+        }
+        .scenario-box {
+            background: #fbf3ec;
+            padding: 1.4rem 1.8rem;
+            border-radius: 24px 8px 24px 8px;
+            margin: 0.8rem 0 1.8rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+            border: 1px solid #e6d0bf;
+        }
+        .scenario-item {
+            flex: 1 1 200px;
+        }
+        .scenario-item h4 {
+            font-weight: 500;
+            color: #7e4f32;
+            margin-bottom: 0.2rem;
+            font-size: 1.05rem;
+        }
+        .faq-mini {
+            margin: 2.2rem 0 1.8rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        .faq-q {
+            background: #f6e9de;
+            padding: 0.8rem 1.4rem;
+            border-radius: 60px 8px 60px 8px;
+            font-weight: 500;
+            color: #583524;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid #e9d2c0;
+        }
+        .faq-q::before {
+            content: "▹";
+            color: #b48365;
+            font-size: 1.2rem;
+        }
+        .faq-a {
+            padding: 0 0.6rem 0 2.2rem;
+            color: #4a3428;
+            font-size: 0.96rem;
+        }
+        .access-note {
+            background: #eadacb;
+            border-radius: 40px 8px 40px 8px;
+            padding: 1.4rem 2rem;
+            margin: 2.2rem 0 1.2rem 0;
+            font-size: 1.02rem;
+            color: #2e1d14;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.6rem 0.4rem;
+            border: 1px solid #dcc1ac;
+        }
+        .access-note a {
+            font-weight: 600;
+            color: #6a381d;
+            text-decoration: none;
+            background: #faf0e7;
+            padding: 0.2rem 1rem;
+            border-radius: 60px;
+            border: 1px solid #cba58a;
+            transition: 0.2s;
+            white-space: nowrap;
+        }
+        .access-note a:hover {
+            background: #f2ddcd;
+            border-color: #b17d5d;
+            box-shadow: 0 2px 8px rgba(130, 70, 30, 0.12);
+        }
+        .meta-note {
+            font-size: 0.9rem;
+            color: #7d5f4a;
+            border-top: 1px dashed #dcc7b6;
+            padding-top: 1.4rem;
+            margin-top: 2rem;
+            text-align: left;
+            opacity: 0.8;
+        }
+        @media (max-width: 540px) {
+            .card {
+                padding: 2rem 1.2rem;
+                border-radius: 32px 8px 32px 8px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .hero-text {
+                padding: 1.2rem 1.2rem;
+            }
+            .highlight-grid {
+                flex-direction: column;
+            }
+            .scenario-box {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .faq-a {
+                padding-left: 1.2rem;
+            }
+            .access-note {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+
+    <h1>威廉希尔 <span style="font-size:0.9rem; font-weight:400; background:#f0dfd2; padding:0.2rem 0.8rem; border-radius:40px; color:#653b24;">产品说明</span></h1>
+    <div class="subhead">一个能快速帮你识别用途的工具型页面</div>
+    <div class="tagline">📌 摘要 · 亮点 · 场景指引</div>
+
+    <div class="hero-text">
+        <strong>威廉希尔</strong> 不是某个宏大平台的门面，而是一个聚焦「信息轻识别」的辅助页面。  
+        如果你正在找一个结构清晰、没有干扰、能快速判断是否对你有帮助的站点，这里恰好提供了这样的起点。  
+        它不堆砌功能，只在必要的地方给你一个<strong>克制的入口</strong>。
+    </div>
+
+    <!-- 亮点卡片 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
+        <span style="font-weight:600; color:#5a3420;">✨ 三个值得留意的特点</span>
+    </div>
+    <div class="highlight-grid">
+        <div class="high-item"><span>🎯 意图直给</span>打开页面就能看懂这个站点解决什么问题，没有冗余导航。</div>
+        <div class="high-item"><span>🧱 卡片式节奏</span>内容区块分明，视觉重心由你控制，浏览压力小。</div>
+        <div class="high-item"><span>🔄 持续优化</span>结构会随说明方向更新，不固守同一套文案模板。</div>
+    </div>
+
+    <!-- 使用建议 / 场景 -->
+    <div class="section-title">📋 哪些场景下适合打开它</div>
+    <div class="scenario-box">
+        <div class="scenario-item">
+            <h4>🔍 快速验证</h4>
+            <p>你想知道某个资源或工具是否匹配自己的需求，先看页面摘要再做判断。</p>
+        </div>
+        <div class="scenario-item">
+            <h4>📎 轻量参考</h4>
+            <p>不需要注册或下载，直接阅读说明就能获得有效信息，节省决策成本。</p>
+        </div>
+        <div class="scenario-item">
+            <h4>🧩 信息对照</h4>
+            <p>当你同时对比几个类似站点时，简洁的卡片布局让差异一目了然。</p>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要形式 -->
+    <div class="section-title">❓ 你可能想问的</div>
+    <div class="faq-mini">
+        <div>
+            <div class="faq-q">这个页面主要展示了什么内容？</div>
+            <div class="faq-a">它是一份围绕「威廉希尔」的产品式说明，包括摘要、特点、使用场景以及一条克制的入口链接。不涉及后台或复杂注册流程。</div>
+        </div>
+        <div>
+            <div class="faq-q">页面里的链接会跳转到哪里？</div>
+            <div class="faq-a">唯一的链接指向 <strong>lab-williamhill.com</strong>，你可以把它当作一个自然的信息延伸，按需决定是否进一步浏览。</div>
+        </div>
+    </div>
+
+    <!-- 可信但克制的访问说明，自然嵌入 a 标签 -->
+    <div class="access-note">
+        <span>🔗 如果你觉得内容方向符合预期，可以了解一下</span>
+        <a href="https://lab-williamhill.com">威廉希尔</a>
+        <span>——它就在那里，没有多余的引导，你随时可以返回当前页面做对比。</span>
+    </div>
+
+    <!-- 小提示 + 底线说明 -->
+    <div class="meta-note">
+        ⚡ 页面基于真实说明方向生成，未包含诱导或夸张承诺。<br>
+        · 所有信息仅供识别用途，具体以实际站点为准。
+    </div>
+
+</div>
+</body>
+</html>
